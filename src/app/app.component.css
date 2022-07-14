@@ -1,45 +1,52 @@
 .circle {
 	height: 40px;
 	width:40px;
-	background-color: black;
+	background-color: none;
 	border-radius: 50%;
 	position: relative;
 	box-sizing: border-box;
-	border:3px solid black;
-	animation: circle 2.5s infinite;
-	transition: border 0.25s, transform 0.25s;
+	border:3px solid #8C62F1;
+	transition: border 0.25s, transform 0.25s, box-shadow 0.25s;
 	display: inline-block;
 }
-@keyframes circle{
-  0% {
-    border: 3px solid blue;
-  }
-  30% {
-    border: 3px solid #FC00FF;
-  }
-  70% {
-    border: 3px solid #1CC3E2;
-  }
-  100% {
-  	border: 3px solid blue;
-  }
+.circle:hover{
+	box-shadow: 0 0 0 3px white, 0 0 0 6px #1CC3E2;
+}
+.circle:active{
+	box-shadow: 0 0 0 3px white, 0 0 0 6px #FC00FF;
+}
+.activeCircle{
+	height: 40px;
+	width:40px;
+	background-color: none;
+	border-radius: 50%;
+	position: relative;
+	box-sizing: border-box;
+	border:3px solid #8C62F1;
+	box-shadow: 0 0 0 3px white, 0 0 0 6px #FC00FF;
+	transition: border 0.25s, transform 0.25s, box-shadow 0.25s;
+	display: inline-block;
 }
 .rgbLight{
 	box-sizing: border-box;
-	border-bottom:3px solid black;
-	animation: rgbLight 2.5s infinite;
+	border-bottom:5px solid black;
+	animation: rgbLight 5s infinite;
 }
 @keyframes rgbLight{
   0% {
-    border-bottom: 3px solid blue;
+    border-bottom: 5px solid #8C62F1;
+    border-top: 5px solid #8C62F1;
   }
   30% {
-    border-bottom: 3px solid #FC00FF;
+    border-bottom: 5px solid #FC00FF;
+    border-top: 5px solid #1CC3E2;
   }
   70% {
-    border-bottom: 3px solid #1CC3E2;
+    border-bottom: 5px solid #1CC3E2;
+    border-top: 5px solid #FC00FF;
   }
   100% {
-  	border-bottom: 3px solid blue;
+  	border-bottom: 5px solid #8C62F1;
+  	border-top: 5px solid #8C62F1;
   }
 }
