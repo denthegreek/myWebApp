@@ -55,11 +55,13 @@
   .position {
   	margin-top: -4px;
     font-size: 35px;
+    float: left;
+    margin-left: 15px;
   }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .position {
     font-size: 5vw;
     margin-top: 2vw;
