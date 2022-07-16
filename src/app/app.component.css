@@ -53,17 +53,73 @@
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 601px) {
   .position {
-  	margin-top: -4px;
-    font-size: 35px;
+  	margin-top: -5px;
+    font-size: 40px;
     float: left;
     margin-left: 15px;
+  }
+  .aboutmeCard{
+  	height:30vw;
+  	width: 30vw;
+  	font-size: 1.4vw;;
+  	margin-right: 1.65vw;
+  	margin-left: 1.65vw;
+  	background-color: #1c1c1c;
+  	border-radius: 20px;
+  	overflow: hidden;
+  	border:5px solid #FC00FF;
+  	color: #1CC3E2;
+  	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    animation: aboutmeCard 5s infinite;
+    display: inline-block;
+    overflow: hidden;
+    border: 5px solid #8C62F1;
   }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .position {
     font-size: 5vw;
-    margin-top: 2vw;
+    margin-top: 0;
+    margin-right: 10px;
+    float: right;
+  }
+  .aboutmeCard{
+  	height:90vw;
+  	width: 90vw;
+  	font-size: 4vw;
+  	margin-right: 5vw;
+  	margin-left: 5vw;
+  	margin-bottom: 20px;
+  	background-color: #1c1c1c;
+  	border-radius: 20px;
+  	overflow: hidden;
+  	border:5px solid #FC00FF;
+  	color: #1CC3E2;
+  	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    animation: aboutmeCard 2.5s infinite;
+    display: inline-block;
+    overflow: hidden;
+    border: 3px solid #8C62F1;
+    overflow-x: hidden;
+  }
+}
+ @keyframes aboutmeCard{
+  0% {
+    border-color: #8C62F1;
+  }
+  30% {
+    border-color: #FC00FF;
+  }
+  70% {
+    border-color: #1CC3E2;
+  }
+  100% {
+  	border-color: #8C62F1;
   }
 }
