@@ -59,11 +59,11 @@
     margin-left: 15px;
   }
   .aboutmeCard{
-  	height:30vw;
-  	width: 30vw;
-  	font-size: 1.4vw;;
-  	margin-right: 1.65vw;
-  	margin-left: 1.65vw;
+  	height:28vw;
+  	width: 28vw;
+  	font-size: 1.3vw;;
+  	margin-right: 2.65vw;
+  	margin-left: 2.65vw;
   	background-color: #1c1c1c;
   	border-radius: 20px;
   	overflow: hidden;
@@ -72,11 +72,46 @@
   	box-sizing: border-box;
   	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    animation: aboutmeCard 5s infinite;
+    animation: aboutmeCard 5s infinite, smooth_in 0.5s;
     display: inline-block;
     overflow: hidden;
     border: 5px solid #8C62F1;
+    white-space: break-spaces;
   }
+  .bottomArrowsAboutMe{
+  	display: block;
+  }
+  .arrowBtn{
+		width:2vw;
+		height: 2vw;
+		padding-top: 0.25vw;
+		padding-bottom: 0.25vw;
+		padding: 0.25vw 0.25vw 0.25vw 0.25vw;
+		border-radius: 50%;
+		transition: width 0.25s, height 0.25s, padding 0.25s, box-shadow 0.25s;
+		margin-left: 0.25vw;
+		margin-right: 0.25vw;
+	}
+	.arrowBtn:hover{
+		width: 2.5vw;
+		height: 2.5vw;
+		padding: 0 0 0 0;
+		box-shadow: 0 0 0 0.25vw #8C62F1;
+	}
+	.arrowBtn:active{
+		box-shadow: 0 0 0 0.25vw #FC00FF;
+	}
+	.aboutMeSlider{
+		width:100vw;
+		overflow:hidden;
+		position: relative;
+		transition: transform  1s;
+		white-space:nowrap;
+		scroll-behavior: smooth;
+	}
+	.showIfSmallScreen{
+		display: none;
+	}
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -107,7 +142,35 @@
     overflow: hidden;
     border: 3px solid #8C62F1;
     overflow-x: hidden;
+    white-space: break-spaces;
   }
+  .bottomArrowsAboutMe{
+  	display: none;
+  }
+  .arrowBtn{
+		width:10vw;
+		height: 10vw;
+		padding: 0.25vw 0.25vw 0.25vw 0.25vw;
+		border-radius: 50%;
+		transition: width 0.25s, height 0.25s, padding 0.25s, box-shadow 0.25s;
+		margin-left: 0.25vw;
+		margin-right: 0.25vw;
+		box-sizing: border-box;
+	}
+	.arrowBtn:active{
+		box-shadow: 0 0 0 1vw #FC00FF;
+	}
+	.aboutMeSlider{
+		width:100vw;
+		overflow-y:hidden;
+		position: relative;
+		transition: transform  1s;
+		white-space: pre-wrap;
+		scroll-behavior: smooth;
+	}
+	.showIfSmallScreen{
+		display: block;
+	}
 }
  @keyframes aboutmeCard{
   0% {
@@ -122,4 +185,12 @@
   100% {
   	border-color: #8C62F1;
   }
+}
+@keyframes smooth_in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }

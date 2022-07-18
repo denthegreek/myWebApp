@@ -1,49 +1,109 @@
 <div style="position: absolute;top: 0;left: 0; width:100%;height: 100%;background-color:{{whiteMode['background']}};color:{{whiteMode['text']}};padding: 0;margin: 0;">
 	<div class="rgbLight" style="width:100%; text-align: center;background: rgb(34,1,51);background: {{whiteMode['gradBckgrnd1']}};background: {{whiteMode['gradBckgrnd2']}};">
-		<img src="/myWebApp/assets/DNlogo.png" style="position: relative; width:45%;display: inline-block;">
+		<img src="{{assetsPath}}assets/DNlogo.png" style="position: relative; width:45%;display: inline-block;">
 	</div>
 	<div id="menuBar" style="width: 100%;text-align: left;box-sizing: border-box;padding-top: 12px;position: relative;height:70px;overflow-x: hidden;">
-		<div id="menu" class="circle" (click)="navClick('menu')" (mouseenter)="navigateInfoChanger('// menu')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
-			<img src="/myWebApp/assets/menu.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+		<div id="home" class="activeCircle" (click)="navClick('home')" (mouseenter)="navigateInfoChanger('// home')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+			<img src="{{assetsPath}}assets/home.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="about me" class="circle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
-			<img src="/myWebApp/assets/aboutMe.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+			<img src="{{assetsPath}}assets/aboutMe.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="videos" class="circle" (click)="navClick('videos')" (mouseenter)="navigateInfoChanger('// videos')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
-			<img src="/myWebApp/assets/video.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+			<img src="{{assetsPath}}assets/video.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="code" class="circle" (click)="navClick('code')" (mouseenter)="navigateInfoChanger('// code')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
-			<img src="/myWebApp/assets/code.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+			<img src="{{assetsPath}}assets/code.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="position" class="position" style="height: 40px;display: inline-block;transition: color 0.25s;">
 			<div style="display: inline-block;margin: 0;">{{navInfo}}</div>
 		</div>
 	</div>
 	<!-- about me -->
-	<div *ngIf="activeInfo == '// about me'" style="width:100vw;overflow-x:hidden;">
-		<div class="aboutmeCard">
-			<div style="background-image: url('/myWebApp/assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
-				<img src="/myWebApp/assets/njit.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+	<div id="aboutMeContainer" style="width:100vw;">
+		<div *ngIf="activeInfo == '// about me'" id="aboutMePanel" class="aboutMeSlider">
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;">// {{aboutMeCategories[2]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/dnCard.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I started, on the summer of 2022, to brand my code and videos. It was a measure necessary so that I could consistently showcase my material. Thus, ΔΝ Dev Studios came to existance. Delta Nhi are the initials of my name in greek.<br>(Δημοσθένης Νικολακόπουλος)</p>
+				</div>
 			</div>
-			<div style="width: 100%;">
-				<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I graduated with a Bachelors in Science deggree on Computer science on May 2021, from NJIT.</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/njit.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I graduated with a Bachelors in Science deggree, on Computer Science, on May 2021, from NJIT.</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/army.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. There they put me in charge of the Tech Department of the XV Armored Brigade, and later on of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.</p>
+				</div>
+			</div>
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;border-top: 2px solid purple;padding-top: 10px;">// {{aboutMeCategories[1]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/armyWork.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
+			</div>
+			<div  class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/oneNineAI.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/amazon.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
+			</div>
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;border-top: 2px solid purple;padding-top: 10px;">// {{aboutMeCategories[2]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/myStory.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/contactMe.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/myPictureCard.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;"></p>
+				</div>
 			</div>
 		</div>
-		<div class="aboutmeCard">
-			<div style="background-image: url('/myWebApp/assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
-				<img src="/myWebApp/assets/dnCard.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
-			</div>
-			<div style="width: 100%;">
-				<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I started, on the summer of 2022, to brand my code and videos. It was a measure necessary so that I could consistently showcase my material. Thus, ΔΝ Dev Studios came to existance. Delta Nhi are the initials of my name in greeks.<br>(Δημοσθένης Νικολακόπουλος)</p>
-			</div>
-		</div>
-		<div class="aboutmeCard">
-			<div style="background-image: url('/myWebApp/assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
-				<img src="/myWebApp/assets/army.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
-			</div>
-			<div style="width: 100%;">
-				<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;">I have served as an officer (Second Lieutanent) in the greek military, which is a NATO army with modern equipment. There they put me in charge of the Tech Department of the XV Armored Brigade, and later on of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployiment. Additionally, we were responsible for all IT related maintanace and handling.</p>
-			</div>
+	</div>
+	<div *ngIf="activeInfo == '// about me'">
+		<div class="bottomArrowsAboutMe" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
+			<div *ngIf="scrollCount>0" style="display: inline-block;"><img src="{{assetsPath}}assets/leftArrow.png" class="arrowBtn" (click)="aboutMeMovement('left')"></div>
+			<div *ngIf="scrollCount<2" style="display: inline-block;"><img src="{{assetsPath}}assets/rightArrow.png" class="arrowBtn" (click)="aboutMeMovement('right')"> </div>
+			<p style="margin: 0 0 0 0;font-size: 1vw;display: inline-block;position: relative;width: 100vw;text-align: center;">// {{aboutMeCategories[scrollCount]}} //</p>
 		</div>
 	</div>
 </div>

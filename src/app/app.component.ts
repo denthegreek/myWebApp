@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'DNDS';
 	navInfo:string = "";
-	activeInfo:string="";
+	activeInfo:string="// home";
+
+	assetsPath="/myWebApp/";
+
 	whiteMode={
 		background : "#0000",
 		text : "#8C62F1",
@@ -36,6 +39,21 @@ export class AppComponent {
 		else{
 			this.navInfo=this.activeInfo;
 			document.getElementById("position")!.style.color="#8C62F1";
+		}
+	}
+	scroller:number=0;
+	scrollCount:number=0;
+	aboutMeCategories=["my introduction","recent work experience","basic and contact information"];
+	async aboutMeMovement(direction:string){
+		if(direction=="left" && this.scrollCount > 0){
+			this.scroller=this.scroller-window.innerWidth;
+			document.getElementById("aboutMePanel")!.scroll(this.scroller, 0);
+			this.scrollCount--;
+		}
+		else if(direction=="right" &&  this.scrollCount < 2){
+			this.scroller=this.scroller+window.innerWidth;
+			document.getElementById("aboutMePanel")!.scroll(this.scroller, 0);
+			this.scrollCount++;
 		}
 	}
 }
