@@ -61,7 +61,7 @@
   .aboutmeCard{
   	height:28vw;
   	width: 28vw;
-  	font-size: 1.3vw;;
+  	font-size: 1.15vw;;
   	margin-right: 2.65vw;
   	margin-left: 2.65vw;
   	background-color: #1c1c1c;
@@ -100,6 +100,7 @@
 	}
 	.arrowBtn:active{
 		box-shadow: 0 0 0 0.25vw #FC00FF;
+		animation: smooth_in 0.5s;
 	}
 	.aboutMeSlider{
 		width:100vw;

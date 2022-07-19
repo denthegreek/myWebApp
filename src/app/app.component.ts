@@ -46,12 +46,12 @@ export class AppComponent {
 	aboutMeCategories=["my introduction","recent work experience","basic and contact information"];
 	async aboutMeMovement(direction:string){
 		if(direction=="left" && this.scrollCount > 0){
-			this.scroller=this.scroller-window.innerWidth;
+			this.scroller=this.scroller-document.getElementById("aboutMePanel")!.clientWidth;
 			document.getElementById("aboutMePanel")!.scroll(this.scroller, 0);
 			this.scrollCount--;
 		}
 		else if(direction=="right" &&  this.scrollCount < 2){
-			this.scroller=this.scroller+window.innerWidth;
+			this.scroller=this.scroller+document.getElementById("aboutMePanel")!.clientWidth;
 			document.getElementById("aboutMePanel")!.scroll(this.scroller, 0);
 			this.scrollCount++;
 		}
