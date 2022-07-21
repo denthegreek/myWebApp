@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'DNDS';
 	navInfo:string = "";
-	activeInfo:string="// home";
+	activeInfo:string="// about me";
 
-	assetsPath="/myWebApp/";
+	assetsPath="../";
 
 	whiteMode={
 		background : "#0000",

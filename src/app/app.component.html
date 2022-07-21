@@ -3,10 +3,10 @@
 		<img src="{{assetsPath}}assets/DNlogo.png" class="topLogo">
 	</div>
 	<div id="menuBar" style="width: 100%;text-align: left;box-sizing: border-box;padding-top: 12px;position: relative;height:70px;overflow-x: hidden;">
-		<div id="home" class="activeCircle" (click)="navClick('home')" (mouseenter)="navigateInfoChanger('// home')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+		<div id="home" class="circle" (click)="navClick('home')" (mouseenter)="navigateInfoChanger('// home')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/home.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
-		<div id="about me" class="circle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+		<div id="about me" class="activeCircle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/aboutMe.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="videos" class="circle" (click)="navClick('videos')" (mouseenter)="navigateInfoChanger('// videos')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
@@ -28,7 +28,7 @@
 					<img src="{{assetsPath}}assets/dnCard.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
 				</div>
 				<div style="width: 100%;">
-					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I started, on the summer of 2022, to brand my code and videos. It was a measure necessary so that I could consistently showcase my material. Thus, ΔΝ Dev Studios came to existance. Delta Nhi are the initials of my name in greek.<br>(Δημοσθένης Νικολακόπουλος)</p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I started, on the summer of 2022, to brand my code and videos. It was a measure necessary to consistently showcase my material. Thus, ΔΝ Dev Studios came to existance. Delta Nhi are the initials of my name in greek.<br>(Δημοσθένης Νικολακόπουλος)<br>My main goal is to show others pieces of my code, to give people inspiration from my own work.</p>
 				</div>
 			</div>
 			<div class="aboutmeCard">
@@ -36,7 +36,7 @@
 					<img src="{{assetsPath}}assets/njit.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
 				</div>
 				<div style="width: 100%;">
-					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I graduated with a Bachelors in Science deggree, on Computer Science, on May 2021, from NJIT.</p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I graduated with a Bachelors in Science deggree in Computer Science, on May 2021, from NJIT.<br><br><br>During I was still attending the classes, I already had decided to follow a web developers carrer. Hence I took courses towards that career path and I managed to ace most of them.</p>
 				</div>
 			</div>
 			<div class="aboutmeCard">
@@ -44,7 +44,7 @@
 					<img src="{{assetsPath}}assets/army.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
 				</div>
 				<div style="width: 100%;">
-					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. There they put me in charge of the Tech Department of the XV Armored Brigade, and later on of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.</p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. I was in charge of the Tech Department of the XV Armored Brigade, and later on, of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.</p>
 				</div>
 			</div>
 			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;border-top: 2px solid purple;padding-top: 10px;">// {{aboutMeCategories[1]}} //</p>
@@ -78,7 +78,7 @@
 					<img src="{{assetsPath}}assets/myStory.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
 				</div>
 				<div style="width: 100%;">
-					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;"></p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">I was born an American Citizen; although, my parrents who have Greek origins moved us back to Greece. Therefore, I was raised overseas, only to return at the age of 18, at 2011. As my parrents did not ever attend a college I made entirely me own new footsteps I studied, worked and lived in the US until I decided to complete a term of military servicce in the Greek Army. (2021-2022) Afterwars, I returned back to the US to continue my career.</p>
 				</div>
 			</div>
 			<div class="aboutmeCard">
