@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'DNDS';
-	navInfo:string = "";
+	navInfo:string = "// about me";
 	activeInfo:string="// about me";
 
 	assetsPath="/myWebApp/";
