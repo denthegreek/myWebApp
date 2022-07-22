@@ -10,7 +10,7 @@ export class AppComponent {
 	navInfo:string = "// about me";
 	activeInfo:string="// about me";
 
-	assetsPath="/myWebApp/";
+	assetsPath="../";
 
 	whiteMode={
 		background : "#0000",
@@ -58,5 +58,11 @@ export class AppComponent {
 			this.scrollCount++;
 			console.log(document.getElementById("aboutMePanel")!.clientWidth);
 		}
+	}
+	scrollTop(){
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "smooth"});
 	}
 }
