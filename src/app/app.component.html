@@ -139,12 +139,14 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div *ngIf="activeInfo == '// about me'">
 		<div class="bottomArrowsAboutMe" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
 			<div *ngIf="scrollCount>0" style="display: inline-block;"><img src="{{assetsPath}}assets/leftArrow.png" class="arrowBtn" (click)="aboutMeMovement('left')"></div>
 			<div *ngIf="scrollCount<2" style="display: inline-block;"><img src="{{assetsPath}}assets/rightArrow.png" class="arrowBtn" (click)="aboutMeMovement('right')"> </div>
 			<p style="margin: 0 0 0 0;font-size: 1.5vw;display: inline-block;position: relative;width: 100vw;text-align: center;">// {{aboutMeCategories[scrollCount]}} //</p>
 		</div>
-		<div class="showIfSmallScreen" style="width:100%;text-align: center;padding: 0.5vh 0 0.5vh;background-color: #8C62F1;color:#fff;font-size: 5vw;box-sizing: border-box;" (click)="scrollTop()">
+		<div class="showIfSmallScreen" style="width:100%;text-align: center;padding: 0.5vh 0 0.5vh;background-color: #8C62F1;color:#fff;font-size: 5vw;box-sizing: border-box;border-top-left-radius: 20px;border-top-right-radius: 20px;" (click)="scrollTop()">
 			<p>&uarr; BACK TO TOP &uarr;</p>
 		</div>
 	</div>
