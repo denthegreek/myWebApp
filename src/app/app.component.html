@@ -139,7 +139,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bottomArrowsAboutMe" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
+		<div class="showIfBigScreen" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
 			<div *ngIf="scrollCount>0" style="display: inline-block;"><img src="{{assetsPath}}assets/leftArrow.png" class="arrowBtn" (click)="aboutMeMovement('left')"></div>
 			<div *ngIf="scrollCount<2" style="display: inline-block;"><img src="{{assetsPath}}assets/rightArrow.png" class="arrowBtn" (click)="aboutMeMovement('right')"> </div>
 			<p style="margin: 0 0 0 0;font-size: 1.5vw;display: inline-block;position: relative;width: 100vw;text-align: center;">// {{aboutMeCategories[scrollCount]}} //</p>
@@ -149,25 +149,34 @@
 		</div>
 	</div>
 	<!-- code -->
+	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="width:100%;text-align:center;font-size: 3vw;">
+		<p style="padding: 0;margin: 0;margin-top: 2vw; font-size: 5vw;font-weight: bold;">&darr; CLICK ME &darr;</p>
+	</div>
 	<div *ngIf="activeInfo == '// code'" id="codeContainer" class="codeContainer">
-		<div id="stohos"  class="codeCard">
-			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
-				<img src="{{assetsPath}}assets/github/stohos_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+		<a href="https://github.com/denthegreek/stohosShootingClub" (mouseenter)="codeTargetSetting('// stohos //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="stohos"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+					<img src="{{assetsPath}}assets/github/stohos_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/stohos.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
 			</div>
-			<img src="{{assetsPath}}assets/github/stohos.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
-		</div>
-		<div id="taskManager"  class="codeCard">
-			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
-				<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+		</a>
+		<a href="https://github.com/denthegreek/TaskManager" (mouseenter)="codeTargetSetting('// Task Manager //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="taskManager"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+					<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/taskManager.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
 			</div>
-			<img src="{{assetsPath}}assets/github/taskManager.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
-		</div>
-		<div id="thisWebSite"  class="codeCard">
-			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
-				<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+		</a>
+		<a href="https://github.com/denthegreek/myWebApp" (mouseenter)="codeTargetSetting('// This Website //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="thisWebSite"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+					<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/thisWebSite.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
 			</div>
-			<img src="{{assetsPath}}assets/github/thisWebSite.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
-		</div>
+		</a>
 	</div>
 	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align: center;">
 		<div class="codeObjects" (click)="codeScroller('stohos')"> 
@@ -179,5 +188,9 @@
 		<div class="codeObjects" (click)="codeScroller('thisWebSite')"> 
 			<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="width:25vw;">
 		</div>
+	</div>
+	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="width:100%;text-align:center;font-size: 3vw;">
+		<p style="padding: 0;margin: 0;margin-top: 2vw; font-size: 50%;">{{clickMeCode}}</p>
+		<p style="padding: 0;margin: 0;">{{codeTarget}}</p>
 	</div>
 </div>

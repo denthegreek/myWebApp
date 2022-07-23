@@ -68,4 +68,15 @@ export class AppComponent {
 	codeScroller(element:string){
 		document.getElementById(element)!.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 	}
+	codeTarget:string="";
+	clickMeCode:string="";
+	codeTargetSetting(target:string){
+		if(target==""){
+			this.clickMeCode="";
+		}
+		else{
+			this.clickMeCode="click to be rederected to"
+		}
+		this.codeTarget=target;
+	}
 }

@@ -97,7 +97,7 @@
     overflow: hidden;
     white-space: break-spaces;
   }
-  .bottomArrowsAboutMe{
+  .showIfBigScreen{
   	display: block;
   }
   .arrowBtn{
@@ -141,7 +141,7 @@
 		display: none;
 	}
 	.codeCard{
-  	height:38vw;
+  	height:35vw;
   	width: 28vw;
   	font-size: 1.2vw;
   	margin-right: 2.65vw;
@@ -162,12 +162,12 @@
     animation: smooth_in 0.5s;
   }
   .codeCard:hover{
-  	height:40vw;
+  	height:37vw;
   	width: 30vw;
   	margin-right: 1.65vw;
   	margin-left: 1.65vw;
   	margin-top: calc(15vh - 4vw);
-  	box-shadow: 0 0 2.5vw 0 purple, 0 0 1vw 0 cyan;
+  	box-shadow: 0 0 2vw 0 purple, 0 0 1vw 0 cyan;
   }
 }
 
@@ -258,9 +258,8 @@
     animation: smooth_in 0.5s;
     display: inline-block;
     overflow: hidden;
-    overflow-x: hidden;
     white-space: break-spaces;
-    border-radius: 20px;
+    border-radius: 0;
   }
 }
  @keyframes aboutmeCard{
