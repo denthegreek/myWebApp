@@ -149,7 +149,7 @@
 		</div>
 	</div>
 	<!-- code -->
-	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="width:100%;text-align:center;font-size: 3vw;">
+	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="width:100%;text-align:center;font-size: 3vw;margin-bottom: 3vw;">
 		<p style="padding: 0;margin: 0;margin-top: 2vw; font-size: 5vw;font-weight: bold;">&darr; CLICK ME &darr;</p>
 	</div>
 	<div *ngIf="activeInfo == '// code'" id="codeContainer" class="codeContainer">
@@ -180,13 +180,13 @@
 	</div>
 	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align: center;">
 		<div class="codeObjects" (click)="codeScroller('stohos')"> 
-			<img src="{{assetsPath}}assets/github/stohos_logo.png" style="width:25vw;">
+			<img src="{{assetsPath}}assets/github/stohos_logo.png" style="width:14vw;">
 		</div>
 		<div class="codeObjects" (click)="codeScroller('taskManager')"> 
-			<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:25vw;">
+			<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:14vw;">
 		</div>
 		<div class="codeObjects" (click)="codeScroller('thisWebSite')"> 
-			<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="width:25vw;">
+			<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="width:14vw;">
 		</div>
 	</div>
 	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="width:100%;text-align:center;font-size: 3vw;">

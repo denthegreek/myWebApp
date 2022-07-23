@@ -33,9 +33,9 @@
 	animation: rgbLight 5s infinite;
 }
 .codeObjects{
-	height: 25vw;
-	width:25vw;
-	padding-top: 5vw;
+	height: 15vw;
+	width:15vw;
+	padding-top: 2.5vw;
 	background-color: transparent;
 	border-radius: 50%;
 	position: relative;
@@ -242,7 +242,7 @@
 		display: block;
 	}
 	.codeCard{
-  	height:60vh;
+  	height:55vh;
   	width: 90vw;
   	font-size: 3.8vw;
   	margin-right: 5vw;
@@ -259,7 +259,7 @@
     display: inline-block;
     overflow: hidden;
     white-space: break-spaces;
-    border-radius: 0;
+    border-radius: 10px;
   }
 }
  @keyframes aboutmeCard{
