@@ -10,7 +10,7 @@ export class AppComponent {
 	navInfo:string = "// code";
 	activeInfo:string="// code";
 
-	assetsPath="../";
+	assetsPath="/myWebApp/";
 
 	whiteMode={
 		background : "#0000",
