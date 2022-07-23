@@ -65,7 +65,6 @@ export class AppComponent {
 			left: 0,
 			behavior: "smooth"});
 	}
-	codeContent=['stohos','taskManager','thisWebSite']
 	codeScroller(element:string){
 		document.getElementById(element)!.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 	}
