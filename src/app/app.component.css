@@ -232,7 +232,7 @@
 	}
 	.codeContainer{
 		width:100vw;
-		overflow-y:hidden;
+		overflow:hidden;
 		position: relative;
 		transition: transform  1s;
 		white-space: nowrap;
