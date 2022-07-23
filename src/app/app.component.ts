@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'DNDS';
-	navInfo:string = "// about me";
-	activeInfo:string="// about me";
+	navInfo:string = "// code";
+	activeInfo:string="// code";
 
 	assetsPath="/myWebApp/";
 
@@ -64,5 +64,9 @@ export class AppComponent {
 			top: 0,
 			left: 0,
 			behavior: "smooth"});
+	}
+	codeContent=['stohos','taskManager','thisWebSite']
+	codeScroller(element:string){
+		document.getElementById(element)!.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 	}
 }

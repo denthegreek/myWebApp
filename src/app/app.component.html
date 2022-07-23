@@ -6,13 +6,13 @@
 		<div id="home" class="circle" (click)="navClick('home')" (mouseenter)="navigateInfoChanger('// home')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/home.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
-		<div id="about me" class="activeCircle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+		<div id="about me" class="circle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/aboutMe.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="videos" class="circle" (click)="navClick('videos')" (mouseenter)="navigateInfoChanger('// videos')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/video.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
-		<div id="code" class="circle" (click)="navClick('code')" (mouseenter)="navigateInfoChanger('// code')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+		<div id="code" class="activeCircle" (click)="navClick('code')" (mouseenter)="navigateInfoChanger('// code')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
 			<img src="{{assetsPath}}assets/code.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
 		</div>
 		<div id="position" class="position" style="height: 40px;display: inline-block;transition: color 0.25s;">
@@ -20,8 +20,8 @@
 		</div>
 	</div>
 	<!-- about me -->
-	<div id="aboutMeContainer" style="width:100vw;">
-		<div *ngIf="activeInfo == '// about me'" id="aboutMePanel" class="aboutMeSlider">
+	<div *ngIf="activeInfo == '// about me'" id="aboutMeContainer" style="width:100vw;">
+		<div id="aboutMePanel" class="aboutMeSlider">
 			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;">// {{aboutMeCategories[0]}} //</p>
 			<div class="aboutmeCard">
 				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
@@ -139,8 +139,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div *ngIf="activeInfo == '// about me'">
 		<div class="bottomArrowsAboutMe" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
 			<div *ngIf="scrollCount>0" style="display: inline-block;"><img src="{{assetsPath}}assets/leftArrow.png" class="arrowBtn" (click)="aboutMeMovement('left')"></div>
 			<div *ngIf="scrollCount<2" style="display: inline-block;"><img src="{{assetsPath}}assets/rightArrow.png" class="arrowBtn" (click)="aboutMeMovement('right')"> </div>
@@ -148,6 +146,38 @@
 		</div>
 		<div class="showIfSmallScreen" style="width:100%;text-align: center;padding: 0.5vh 0 0.5vh;background-color: #8C62F1;color:#fff;font-size: 5vw;box-sizing: border-box;border-top-left-radius: 20px;border-top-right-radius: 20px;" (click)="scrollTop()">
 			<p>&uarr; BACK TO TOP &uarr;</p>
+		</div>
+	</div>
+	<!-- code -->
+	<div *ngIf="activeInfo == '// code'" id="codeContainer" class="codeContainer">
+		<div id="stohos"  class="codeCard" style="">
+			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: none;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+				<img src="{{assetsPath}}assets/github/stohos_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+			</div>
+			<img src="{{assetsPath}}assets/github/stohos.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
+		</div>
+		<div id="taskManager"  class="codeCard" style="">
+			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: none;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+				<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+			</div>
+			<img src="{{assetsPath}}assets/github/taskManager.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
+		</div>
+		<div id="thisWebSite"  class="codeCard" style="">
+			<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: none;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: purple;">
+				<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+			</div>
+			<img src="{{assetsPath}}assets/github/thisWebSite.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: purple;">
+		</div>
+	</div>
+	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align: center;">
+		<div class="codeObjects" (click)="codeScroller('stohos')"> 
+			<img src="{{assetsPath}}assets/github/stohos_logo.png" style="width:25vw;">
+		</div>
+		<div class="codeObjects" (click)="codeScroller('taskManager')"> 
+			<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:25vw;">
+		</div>
+		<div class="codeObjects" (click)="codeScroller('thisWebSite')"> 
+			<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="width:25vw;">
 		</div>
 	</div>
 </div>
