@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'DNDS';
-	navInfo:string = "// code";
-	activeInfo:string="// code";
+	navInfo:string = "// home";
+	activeInfo:string="// home";
 
 	assetsPath="/myWebApp/";
 
@@ -75,7 +75,7 @@ export class AppComponent {
 			this.clickMeCode="";
 		}
 		else{
-			this.clickMeCode="click to be rederected to"
+			this.clickMeCode="click to be rederected to github"
 		}
 		this.codeTarget=target;
 	}
