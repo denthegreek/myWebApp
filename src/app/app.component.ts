@@ -10,6 +10,12 @@ export class AppComponent {
 	navInfo:string = "// home";
 	activeInfo:string="// home";
 
+	scroller:number=0;
+	scrollCount:number=0;
+
+	currentVideoLink:string="https://www.youtube.com/embed/YrigaGXr--E";
+	currentVideo:string="Stohos Shooting Club";
+
 	assetsPath="/myWebApp/";
 
 	whiteMode={
@@ -30,6 +36,10 @@ export class AppComponent {
 		document.getElementById(elementId)!.classList.add("activeCircle");
 		this.activeInfo="// "+elementId;
 		document.getElementById("position")!.style.color="#8C62F1";
+		this.currentVideoLink="https://www.youtube.com/embed/YrigaGXr--E";
+		this.currentVideo="Stohos Shooting Club";
+		this.scroller=0;
+		this.scrollCount=0;
 	}
 	navigateInfoChanger(info:string){
 		if(info!="" && info!=this.activeInfo){
@@ -41,8 +51,6 @@ export class AppComponent {
 			document.getElementById("position")!.style.color="#8C62F1";
 		}
 	}
-	scroller:number=0;
-	scrollCount:number=0;
 	elementSizing=0;
 	aboutMeCategories=["my introduction","recent work experience","basic and contact information"];
 	async aboutMeMovement(direction:string){
@@ -78,5 +86,13 @@ export class AppComponent {
 			this.clickMeCode="click to be rederected to github"
 		}
 		this.codeTarget=target;
+	}
+	changeVideoSource(source:string, title:string){
+		if(source != this.currentVideoLink){
+			var element:HTMLIFrameElement=document.getElementById('youtubePlayer')! as HTMLIFrameElement;
+			element.src=source;
+			this.currentVideoLink=source;
+			this.currentVideo=title;
+		}
 	}
 }

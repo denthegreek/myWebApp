@@ -15,6 +15,15 @@
 .circle:active{
 	box-shadow: 0 0 0 3px white, 0 0 0 6px #FC00FF;
 }
+.mainContainer{
+	width: 100vw;
+	overflow: hidden;
+	position: relative;
+	transition: transform  1s;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	animation: smooth_in 1s;
+}
 .activeCircle{
 	height: 40px;
 	width:40px;
@@ -48,6 +57,26 @@
 }
 .codeObjects:active{
 	box-shadow: 0 0 5vw 0 #b300ff;
+}
+.videoObjects{
+	height: 8vh;
+	width: 8vh;
+	padding-top: 1vh;
+	background-color: transparent;
+	border-radius: 50%;
+	position: relative;
+	box-sizing: border-box;
+	border:3px solid #8C62F1;
+	transition:box-shadow 0.25s;
+	display: inline-block;
+	margin: 0 1vw 0;
+	background-color: #1c1c1c;
+}
+.videoObjects:hover{
+	box-shadow: 0 0 0 0.5vh white, 0 0 0 1vh #1CC3E2;
+}
+.videoObjects:active{
+	box-shadow:0 0 0 0.5vh #8C62F1;
 }
 @keyframes rgbLight{
   0% {
@@ -122,7 +151,6 @@
 	}
 	.arrowBtn:active{
 		box-shadow: 0 0 0 0.25vw #FC00FF;
-		animation: smooth_in 0.5s;
 	}
 	.aboutMeSlider{
 		width:100vw;

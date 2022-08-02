@@ -19,6 +19,14 @@
 			<div style="display: inline-block;margin: 0;">{{navInfo}}</div>
 		</div>
 	</div>
+	<!-- home -->
+	<!-- video -->
+	<div *ngIf="activeInfo == '// home'" id="homeContainer" class="mainContainer" style="text-align:center;font-size: 3vw;">
+		<p>Welcome to ΔΝ Development Studio!</p>
+		<div style="margin-left: 10%;width:80%;margin-right: 10%;">
+			
+		</div>
+	</div>
 	<!-- about me -->
 	<div *ngIf="activeInfo == '// about me'" id="aboutMeContainer" style="width:100vw;">
 		<p class="showIfBigScreen" style="margin: 0 0 0 0;font-size: 2vw;position: relative;width: 100vw;text-align: center;margin-top:calc((15vh - 4vw)/2);">// {{aboutMeCategories[scrollCount]}} //</p>
@@ -50,7 +58,7 @@
 				</div>
 				<div style="width: 100%;">
 					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
-						I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. I was in charge of the Tech Department of the XV Armored Brigade, and later on, of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.
+						I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. I was in charge of the Tech Department of the XXV Armored Brigade, and later on, of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.
 					</p>
 				</div>
 			</div>
@@ -113,8 +121,8 @@
 					<img src="{{assetsPath}}assets/myStory.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
 				</div>
 				<div style="width: 100%;">
-					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
-					I was born an American Citizen; although, my parents who had Greek origins moved us back to Greece. Therefore, I was raised overseas, only to return at the age of 18, at 2011. As my parents did not ever attend a college I made entirely my own new footsteps. I studied, worked and lived in the US until I decided to complete a term of military servicce in the Greek Army. (2021-2022) Afterwards, I returned to the US to continue my career.
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 0 1vw 1vw;box-sizing: border-box;">
+					I was born an American Citizen; although, my parents who had Greek origins moved us back to Greece. Therefore, I was raised overseas, only to return at the age of 18, at 2011. As my parents did not ever attend a college, I made entirely my own new footsteps. I studied, worked, and lived in the US, until I decided to complete a term of military servicce in the Greek Army. (2021-2022) <br>Afterwards, I returned to the US to continue my career.
 				</p>
 				</div>
 			</div>
@@ -147,6 +155,23 @@
 		<div class="showIfSmallScreen" style="width:100%;text-align: center;padding: 0.5vh 0 0.5vh;background-color: #8C62F1;color:#fff;font-size: 5vw;box-sizing: border-box;border-top-left-radius: 20px;border-top-right-radius: 20px;" (click)="scrollTop()">
 			<p>&uarr; BACK TO TOP &uarr;</p>
 		</div>
+	</div>
+	<!-- video -->
+	<div *ngIf="activeInfo == '// videos'" id="videoContainer" class="mainContainer" style="text-align:center;font-size: 5vh;margin-top: -2vh;">
+		<p style="margin: 0;padding: 0;font-size: 40%;">Current Video Selection</p>
+		<p style="margin: 0;padding: 0;">// {{currentVideo}} //</p>
+		<div style="margin-left: 20%;width:60%;margin-right: 20%;position: relative;">
+			<iframe id="youtubePlayer" style="width: 70vh;height: 40vh;background-color: rgba(13, 0, 31, 1);padding: 2vw 2vw 2vw;border-radius: 20px;box-shadow: 0 0 2vw 0 #b300ff;margin-top: 2vw;"  src="https://www.youtube.com/embed/YrigaGXr--E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div style="width:100%;text-align: center;margin-top: 2vh;padding-bottom: 2vh;">
+			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/YrigaGXr--E','Stohos Shooting Club')"> 
+				<img src="{{assetsPath}}assets/github/stohos_logo.png" style="width:6vh;">
+			</div>
+			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/kT4uMlV05Cw','Task Manager')"> 
+				<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:7vh;">
+			</div>
+		</div>
+		<p style="margin: 0;padding: 0;font-size: 35%;">I invite you to take a look on my YouTube channel.<br>There, you will find my demonstrations, along with tutorials that I have created.<br>Please, consider subscribing to my channel and giving a like to content that you find interesting.<br>Thank you!</p>
 	</div>
 	<!-- code -->
 	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align:center;font-size: 3vw;margin-bottom: 3vw;">
