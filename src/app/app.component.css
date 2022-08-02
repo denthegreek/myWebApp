@@ -196,7 +196,8 @@
 	.videoObjects{
 		height: 8vh;
 		width: 8vh;
-		padding-top: 1vh;
+		padding-top: 1.4vh;
+		padding-left: 0.3vh;
 		background-color: transparent;
 		border-radius: 50%;
 		position: relative;
@@ -323,7 +324,7 @@
 		scroll-behavior: smooth;
 		animation: smooth_in 1s;
 		margin-top: 3vh;
-		font-size: 12vw;
+		font-size: 11vw;
 	}
 	.videoObjects{
 		height: 30vw;
