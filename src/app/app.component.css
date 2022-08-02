@@ -15,15 +15,6 @@
 .circle:active{
 	box-shadow: 0 0 0 3px white, 0 0 0 6px #FC00FF;
 }
-.mainContainer{
-	width: 100vw;
-	overflow: hidden;
-	position: relative;
-	transition: transform  1s;
-	white-space: nowrap;
-	scroll-behavior: smooth;
-	animation: smooth_in 1s;
-}
 .activeCircle{
 	height: 40px;
 	width:40px;
@@ -58,26 +49,7 @@
 .codeObjects:active{
 	box-shadow: 0 0 5vw 0 #b300ff;
 }
-.videoObjects{
-	height: 8vh;
-	width: 8vh;
-	padding-top: 1vh;
-	background-color: transparent;
-	border-radius: 50%;
-	position: relative;
-	box-sizing: border-box;
-	border:3px solid #8C62F1;
-	transition:box-shadow 0.25s;
-	display: inline-block;
-	margin: 0 1vw 0;
-	background-color: #1c1c1c;
-}
-.videoObjects:hover{
-	box-shadow: 0 0 0 0.5vh white, 0 0 0 1vh #1CC3E2;
-}
-.videoObjects:active{
-	box-shadow:0 0 0 0.5vh #8C62F1;
-}
+
 @keyframes rgbLight{
   0% {
     border-bottom: 5px solid #8C62F1;
@@ -201,6 +173,46 @@
   	margin-top: calc(10vh - 4vw);
   	box-shadow: 0 0 10px 0 purple, 0 0 15px 0 cyan;
   }
+  .mediaPlayer{
+  	width: 70vh;
+  	height: 40vh;
+  }
+  .mediaContainer{
+  	margin-left: 20%;
+  	width:60%;
+  	margin-right: 20%;
+  }
+  .mainContainer{
+		width: 100vw;
+		overflow: hidden;
+		position: relative;
+		transition: transform  1s;
+		white-space: nowrap;
+		scroll-behavior: smooth;
+		animation: smooth_in 1s;
+		margin-top: -2vh;
+		font-size: 5vh;
+	}
+	.videoObjects{
+		height: 8vh;
+		width: 8vh;
+		padding-top: 1vh;
+		background-color: transparent;
+		border-radius: 50%;
+		position: relative;
+		box-sizing: border-box;
+		border:3px solid #8C62F1;
+		transition:box-shadow 0.25s;
+		display: inline-block;
+		margin: 0 1vw 0;
+		background-color: #1c1c1c;
+	}
+	.videoObjects:hover{
+		box-shadow: 0 0 0 0.5vh white, 0 0 0 1vh #1CC3E2;
+	}
+	.videoObjects:active{
+		box-shadow:0 0 0 0.5vh #8C62F1;
+	}
 }
 
 @media (max-aspect-ratio: 10/9) {
@@ -293,6 +305,46 @@
     white-space: break-spaces;
     border-radius: 10px;
   }
+  .mediaPlayer{
+  	width: 100%;
+  	height: 60vw;
+  }
+  .mediaContainer{
+  	margin-left: 2.5%;
+  	width:90%;
+  	margin-right: 5%;
+  }
+  .mainContainer{
+		width: 100vw;
+		overflow: hidden;
+		position: relative;
+		transition: transform  1s;
+		white-space: pre-wrap;
+		scroll-behavior: smooth;
+		animation: smooth_in 1s;
+		margin-top: 3vh;
+		font-size: 12vw;
+	}
+	.videoObjects{
+		height: 30vw;
+		width: 30vw;
+		padding-top: 5vw;
+		background-color: transparent;
+		border-radius: 50%;
+		position: relative;
+		box-sizing: border-box;
+		border:3px solid #8C62F1;
+		transition:box-shadow 0.25s;
+		display: inline-block;
+		margin: 0 5vw 0;
+		background-color: #1c1c1c;
+	}
+	.videoObjects:hover{
+		box-shadow: 0 0 0 0.5vh white, 0 0 0 1vh #1CC3E2;
+	}
+	.videoObjects:active{
+		box-shadow:0 0 0 0.5vh #8C62F1;
+	}
 }
  @keyframes aboutmeCard{
   0% {
