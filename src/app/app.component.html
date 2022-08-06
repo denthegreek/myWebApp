@@ -20,15 +20,54 @@
 		</div>
 	</div>
 	<!-- home -->
-	<!-- video -->
-	<div *ngIf="activeInfo == '// home'" id="homeContainer" class="mainContainer" style="text-align:center;font-size: 3vw;">
-		<p>Welcome to ΔΝ Development Studio!</p>
-		<div style="margin-left: 10%;width:80%;margin-right: 10%;">
-			
+	<div *ngIf="activeInfo == '// home'" id="homeContainer" class="mainContainer" style="text-align:center;">
+		<div class="showIfBigScreen">
+			<div id="leftContainer" class="showIfBigScreen" style="display:inline-block;float: left;width:25vw;min-height:70vh;">
+				
+			</div>
+			<div id="centerContainer" style="display:inline-block;width:50vw;min-height:70vh;">
+				<p style="margin: 0;padding: 0;">Welcome to ΔΝ evelopment Studio!</p>
+				<p style="font-size: 50%;margin: 0;padding: 0;">I am Dimostenis Nikolakopoulos and this is my website.</p>
+			</div>
+			<div id="rightContainer" class="showIfBigScreen" style="animation: smooth_in 2s;white-space: break-spaces;display:inline-block;float: right;width:23vw;min-height:70vh;">
+				<div style="width:100%;">
+					<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+				</div>
+				<a (mouseenter)="currentSocialMedia='// Github //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/github_logo.png">
+				</a>
+				<a (mouseenter)="currentSocialMedia='// YouTube //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube_logo.png">
+				</a>
+				<a (mouseenter)="currentSocialMedia='// LinkedIn //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
+				</a>
+				<img (mouseenter)="currentSocialMedia='// About Me //';" (mouseleave)="currentSocialMedia='';" (click)="navClick('about me')" style="height: 2vw;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
+				<p style="font-size: 70%;padding: 0;margin-top:5px;height:20px;">{{currentSocialMedia}}</p>
+			</div>
+		</div>
+		<div id="mobileContainer" class="showIfSmallScreen" style="animation: smooth_in 2s;font-size: 5vh;white-space: break-spaces;display:inline-block;float: right;width:100%;min-height:70vh;">
+			<div style="width:100%;">
+				<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+			</div>
+			<a (mouseenter)="currentSocialMedia='// Github //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/github_logo.png">
+			</a>
+			<a (mouseenter)="currentSocialMedia='// YouTube //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/youtube_logo.png">
+			</a>
+			<a (mouseenter)="currentSocialMedia='// LinkedIn //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
+			</a>
+			<img (mouseenter)="currentSocialMedia='// About Me //';" (mouseleave)="currentSocialMedia='';" (click)="navClick('about me')" style="height: 5vh;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
+			<p style="padding: 0;margin: 0;">Welcome to ΔΝ Development Studio!</p>
+			<p style="font-size:50%;padding: 0;margin: 0;">I am Dimostenis Nikolakopoulos and this is my website.</p>
+			<img *ngIf="activeInfo == '// home'" src="{{assetsPath}}assets/dnLogoPurpleBckg.png" style="animation: smooth_in 2s;width:20vh;height:20vh;border-radius: 50%;margin-top: 2vh;">
 		</div>
 	</div>
+	<img *ngIf="activeInfo == '// home'" class="showIfBigScreen" src="{{assetsPath}}assets/dnLogoPurpleBckg.png" style="animation: smooth_in 2s;width:50vh;height:50vh;border-radius: 50%;position: absolute;top:30vh;left:calc(( 100vw - 50vh) / 2 );opacity: 1;z-index: 0;">
 	<!-- about me -->
-	<div *ngIf="activeInfo == '// about me'" id="aboutMeContainer" style="width:100vw;">
+	<div *ngIf="activeInfo == '// about me'" id="aboutMeContainer" style="width:100vw;z-index: 2;">
 		<p class="showIfBigScreen" style="margin: 0 0 0 0;font-size: 2vw;position: relative;width: 100vw;text-align: center;margin-top:calc((15vh - 4vw)/2);">// {{aboutMeCategories[scrollCount]}} //</p>
 		<div id="aboutMePanel" class="aboutMeSlider">
 			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;">// {{aboutMeCategories[0]}} //</p>
@@ -48,7 +87,7 @@
 				</div>
 				<div style="width: 100%;">
 					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
-						I graduated with a Bachelors of Science deggree in Computer Science, on May 2021, from NJIT.<br><br><br>While I was still attending classes, I already had decided to follow a web developers carrer. Hence, I took courses towards that career path and I managed to ace most of them.
+						I graduated with a Bachelors of Science deggree in Computer Science, on May 2021, from NJIT.<br><br><br>While I was still attending classes, I already had decided to follow a web developers career. Hence, I took courses towards that career path and I managed to ace most of them.
 					</p>
 				</div>
 			</div>
@@ -74,7 +113,7 @@
 					</p>
 					<p style="width: 100%;text-align: center;font-size: 120%;padding: 0 1vw 1vw;box-sizing: border-box;color: #8C62F1;">
 						Coordinating specialized personel.<br>
-						Managing Window Servers<br>
+						Windows Server Administrator<br>
 						IT Support<br>
 						Bilingual Communication<br>
 						Web Design
@@ -174,14 +213,14 @@
 				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:28vw;">
 			</div>
 		</div>
-		<p style="margin: 0;padding: 0;font-size: 35%;">I invite you to take a look on my YouTube channel.<br>There, you will find my demonstrations, along with tutorials that I have created. Please, consider subscribing to my channel and giving a like to content that you find interesting.<br>Thank you!</p>
+		<p style="margin: 0;padding: 0;font-size: 35%;white-space: pre-wrap;">I invite you to take a look on my YouTube channel.<br>There, you will find my demonstrations, along with tutorials that I have created. Please, consider subscribing to my channel and giving a like to content that you find interesting.<br>Thank you!</p>
 	</div>
 	<!-- code -->
 	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align:center;font-size: 3vw;margin-bottom: 3vw;">
 		<p style="padding: 0;margin: 0;margin-top: 2vw; font-size: 5vw;font-weight: bold;">&darr; CLICK ME &darr;</p>
 	</div>
 	<div *ngIf="activeInfo == '// code'" id="codeContainer" class="codeContainer">
-		<a href="https://github.com/denthegreek/stohosShootingClub" (mouseenter)="codeTargetSetting('// Stohos //')"  (mouseleave)="codeTargetSetting('')">
+		<a href="https://github.com/denthegreek/stohosShootingClub" target="_blank" (mouseenter)="codeTargetSetting('// Stohos //')"  (mouseleave)="codeTargetSetting('')">
 			<div id="stohos"  class="codeCard">
 				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
 					<img src="{{assetsPath}}assets/github/stohos_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
@@ -189,7 +228,7 @@
 				<img src="{{assetsPath}}assets/github/stohos.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: #1c1c1c;">
 			</div>
 		</a>
-		<a href="https://github.com/denthegreek/TaskManager" (mouseenter)="codeTargetSetting('// Task Manager //')"  (mouseleave)="codeTargetSetting('')">
+		<a href="https://github.com/denthegreek/TaskManager" target="_blank" (mouseenter)="codeTargetSetting('// Task Manager //')"  (mouseleave)="codeTargetSetting('')">
 			<div id="taskManager"  class="codeCard">
 				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
 					<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
@@ -197,7 +236,7 @@
 				<img src="{{assetsPath}}assets/github/taskManager.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: #1c1c1c;">
 			</div>
 		</a>
-		<a href="https://github.com/denthegreek/myWebApp" (mouseenter)="codeTargetSetting('// This Website //')"  (mouseleave)="codeTargetSetting('')">
+		<a href="https://github.com/denthegreek/myWebApp" target="_blank" (mouseenter)="codeTargetSetting('// This Website //')"  (mouseleave)="codeTargetSetting('')">
 			<div id="thisWebSite"  class="codeCard">
 				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
 					<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
@@ -220,5 +259,23 @@
 	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="height: 5vw;width:100%;text-align:center;font-size: 3vw;margin-top:0;padding-top: 0;">
 		<p style="padding: 0;margin: 0;margin-top: 0; font-size: 50%;">{{clickMeCode}}</p>
 		<p style="padding: 0;margin: 0;">{{codeTarget}}</p>
+	</div>
+	<!-- bottom section -->
+	<div *ngIf="activeInfo == '// home'" class="showIfBigScreen" style="animation: rgbLight2 4s infinite;position:fixed;bottom: 0;width:100%;text-align:center;border:none;padding-top: 5px;color: #8C62F1;background: {{whiteMode['gradBckgrnd1']}};background: {{whiteMode['gradBckgrnd2']}};">
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/github.png">
+			</a>
+		</div>
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube.png">
+			</a>
+		</div>
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 0;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin.png"> 
+			</a>
+		</div>
 	</div>
 </div>

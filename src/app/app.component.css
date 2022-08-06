@@ -46,10 +46,12 @@
 	margin: 0 2vw 0;
 	background-color: #1c1c1c;
 }
+.codeObjects:hover{
+	box-shadow: 0 0 5vw 0 #1CC3E2;
+}
 .codeObjects:active{
 	box-shadow: 0 0 5vw 0 #b300ff;
 }
-
 @keyframes rgbLight{
   0% {
     border-bottom: 5px solid #8C62F1;
@@ -68,7 +70,21 @@
   	border-top: 5px solid #8C62F1;
   }
 }
-@media (min-aspect-ratio: 10/9) {
+@keyframes rgbLight2{
+  0% {
+    border-top: 5px solid #8C62F1;
+  }
+  30% {
+    border-top: 5px solid #1CC3E2;
+  }
+  70% {
+    border-top: 5px solid #FC00FF;
+  }
+  100% {
+  	border-top: 5px solid #8C62F1;
+  }
+}
+@media (min-aspect-ratio: 10/7) {
   .topLogo{
 		position: relative; 
 		height: 10vh;
@@ -141,7 +157,7 @@
 		scroll-behavior: smooth;
 	}
 	.showIfSmallScreen{
-		display: none;
+		display: none !important;
 	}
 	.codeCard{
   	height:30vw;
@@ -162,8 +178,9 @@
     display: inline-block;
     overflow: hidden;
     white-space: break-spaces;
-    transition: width 0.25s, height 0.25s, box-shadow 0.25s, margin 0.25s;
+    transition: width 0.25s, height 0.25s, box-shadow 0.25s, margin 0.25s, filter 0.25s;
     animation: smooth_in 0.5s;
+    filter: brightness(0.5);
   }
   .codeCard:hover{
   	height:32vw;
@@ -172,6 +189,7 @@
   	margin-left: 3.15vw;
   	margin-top: calc(10vh - 4vw);
   	box-shadow: 0 0 10px 0 purple, 0 0 15px 0 cyan;
+  	filter: brightness(1.0);
   }
   .mediaPlayer{
   	width: 70vh;
@@ -216,7 +234,7 @@
 	}
 }
 
-@media (max-aspect-ratio: 10/9) {
+@media (max-aspect-ratio: 10/7) {
 	.topLogo{
 		position: relative; 
 		height: 5vh;
@@ -252,7 +270,7 @@
     white-space: break-spaces;
   }
   .showIfBigScreen{
-  	display: none;
+  	display: none !important;
   }
   .arrowBtn{
 		width:10vw;

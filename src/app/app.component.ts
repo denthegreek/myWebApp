@@ -16,6 +16,8 @@ export class AppComponent {
 	currentVideoLink:string="https://www.youtube.com/embed/YrigaGXr--E";
 	currentVideo:string="Stohos Shooting Club";
 
+	currentSocialMedia="";
+
 	assetsPath="/myWebApp/";
 
 	whiteMode={
