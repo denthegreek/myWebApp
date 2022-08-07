@@ -19,7 +19,7 @@ export class AppComponent {
 	currentSocialMedia="";
 
 	choicePosition="-4.5vw";
-	njitPosition="21vh";
+	njitPosition="19vh";
 
 	assetsPath="/myWebApp/";
 
