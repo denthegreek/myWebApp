@@ -22,28 +22,33 @@
 	<!-- home -->
 	<div *ngIf="activeInfo == '// home'" id="homeContainer" class="mainContainer" style="text-align:center;">
 		<div class="showIfBigScreen">
-			<div id="leftContainer" class="showIfBigScreen" style="display:inline-block;float: left;width:25vw;min-height:70vh;">
-				
+			<div id="leftContainer" class="showIfBigScreen" style="display:inline-block;float: left;width:25vw;min-height:70vh;position: relative;">
+				<div (mouseenter)="njitPosition='30vh';" (mouseleave)="njitPosition='21vh';" style="box-shadow: 0 0 1.5vh 0 black;width:80%;margin-top: 1.5vh;margin-left: 10%;border-radius: 10px;z-index: 1;background-color: white;position: absolute;bottom: 2vh;">
+					<img src="{{assetsPath}}assets/njit_round.png" style="width:20vh;height:20vh;border-radius: 50%;padding: 5vh 0 4vh;">
+				</div>
+				<p  style="font-size: 1.1vw;padding: 0;margin-top:5px;height:2vw;width: 70%;margin-left: 15%;position: absolute;bottom:{{njitPosition}};z-index: -1;transition: bottom 0.5s;border-top-right-radius: 10px;border-top-left-radius: 10px;color: white;background: rgb(252,0,255);background: linear-gradient(170deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);padding: 1vw 0 1vw;margin-top: 0;box-shadow: 0 0 0.5vw 0 black;">New Jersey Institute of Technology<br>Alumni</p>
 			</div>
 			<div id="centerContainer" style="display:inline-block;width:50vw;min-height:70vh;">
 				<p style="margin: 0;padding: 0;">Welcome to ΔΝ Development Studio!</p>
 				<p style="font-size: 50%;margin: 0;padding: 0;">I am Dimostenis Nikolakopoulos and this is my website.</p>
 			</div>
 			<div id="rightContainer" class="showIfBigScreen" style="animation: smooth_in 2s;white-space: break-spaces;display:inline-block;float: right;width:23vw;min-height:70vh;">
-				<div style="width:100%;">
-					<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+				<div style="box-shadow: 0 0 1.5vh 0 black;width:80%;margin-top: 1.5vh;margin-left: 10%;border-radius: 10px;z-index: 1;background-color: white;">
+					<div style="width:100%;padding-top: 3vh;">
+						<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+					</div>
+					<a (mouseenter)="currentSocialMedia='// Github //';choicePosition='0';" (mouseleave)="choicePosition='-4.5vw';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+						<img style="height: 2vw;" src="{{assetsPath}}assets/social/github_logo.png">
+					</a>
+					<a (mouseenter)="currentSocialMedia='// YouTube //';choicePosition='0';" (mouseleave)="choicePosition='-4.5vw';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+						<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube_logo.png">
+					</a>
+					<a (mouseenter)="currentSocialMedia='// LinkedIn //';choicePosition='0';" (mouseleave)="choicePosition='-4.5vw';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+						<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
+					</a>
+					<img (mouseenter)="currentSocialMedia='// About Me //';choicePosition='0';" (mouseleave)="choicePosition='-4.5vw';" (click)="navClick('about me')" style="height: 2vw;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
 				</div>
-				<a (mouseenter)="currentSocialMedia='// Github //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
-					<img style="height: 2vw;" src="{{assetsPath}}assets/social/github_logo.png">
-				</a>
-				<a (mouseenter)="currentSocialMedia='// YouTube //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
-					<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube_logo.png">
-				</a>
-				<a (mouseenter)="currentSocialMedia='// LinkedIn //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
-					<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
-				</a>
-				<img (mouseenter)="currentSocialMedia='// About Me //';" (mouseleave)="currentSocialMedia='';" (click)="navClick('about me')" style="height: 2vw;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
-				<p style="font-size: 70%;padding: 0;margin-top:5px;height:20px;">{{currentSocialMedia}}</p>
+				<p id="socialChoice" style="font-size: 1.5vw;padding: 0;margin-top:5px;height:2vw;width: 70%;margin-left: 15%;position: relative;top:{{choicePosition}};z-index: -1;transition: top 0.5s;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;color: white;background: rgb(252,0,255);background: linear-gradient(170deg, rgba(252,0,255,1) 0%, rgba(0,219,222,1) 100%);padding: 0.5vw 0 0.1vw;margin-top: 0;box-shadow: 0 0 0.5vw 0 black;">{{currentSocialMedia}}</p>
 			</div>
 		</div>
 		<div id="mobileContainer" class="showIfSmallScreen" style="animation: smooth_in 2s;font-size: 5vh;white-space: break-spaces;display:inline-block;float: right;width:100%;min-height:70vh;">
@@ -206,11 +211,15 @@
 		<div style="width:100%;text-align: center;margin-top: 2vh;padding-bottom: 2vh;">
 			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/YrigaGXr--E','Stohos Shooting Club')"> 
 				<img class="showIfBigScreen" src="{{assetsPath}}assets/github/stohos_logo.png" style="width:7vh;">
-				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/stohos_logo.png" style="width:28vw;">
+				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/stohos_logo.png" style="width:18.5vw;">
 			</div>
 			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/kT4uMlV05Cw','Task Manager')"> 
 				<img class="showIfBigScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:7vh;">
-				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:28vw;">
+				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:18.5vw;">
+			</div>
+			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/smRr8co_qEQ','Yfansis')"> 
+				<img class="showIfBigScreen" src="{{assetsPath}}assets/github/yfansis_logo.png" style="width:7vh;margin-top: 0.4vh;">
+				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/yfansis_logo.png" style="width:18.5vw;">
 			</div>
 		</div>
 		<p style="margin: 0;padding: 0;font-size: 35%;white-space: pre-wrap;">I invite you to take a look on my YouTube channel.<br>There, you will find my demonstrations, along with tutorials that I have created. Please, consider subscribing to my channel and giving a like to content that you find interesting.<br>Thank you!</p>
