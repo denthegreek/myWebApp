@@ -88,7 +88,7 @@ export class AppComponent {
 			this.clickMeCode="";
 		}
 		else{
-			this.clickMeCode="click to be rederected to github"
+			this.clickMeCode="click to be redirected to github"
 		}
 		this.codeTarget=target;
 	}
